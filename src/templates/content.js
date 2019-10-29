@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import { MDXProvider } from "@mdx-js/react"
 
@@ -117,14 +117,3 @@ export default ({ pageContext, children }) => {
     </>
   )
 }
-
-export const pageQuery = graphql`
-  query MDXQuery($id: String!) {
-    mdx(id: { eq: $id }) {
-      frontmatter {
-        unit
-        title
-      }
-    }
-  }
-`

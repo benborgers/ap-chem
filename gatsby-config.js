@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://chem.elk.sh"
+  },
   plugins: [
     "gatsby-plugin-netlify-cache",
     "gatsby-plugin-sitemap",
