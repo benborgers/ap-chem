@@ -40,10 +40,10 @@ export default ({ data }) => {
           <p
             css={css`
               margin: 0;
-              font-size: .9rem;
+              line-height: 1.4;
             `}
           >
-            {"A couple summaries written by "}
+            {"Unit summaries written by "}
             <a href="https://benborgers.com">
               Ben Borgers
             </a>
