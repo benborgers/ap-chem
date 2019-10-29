@@ -8,8 +8,9 @@ import GlobalStyles from "../components/GlobalStyles"
 import Layout from "../components/Layout"
 
 import Equation from "../components/Equation"
+import Callout from "../components/Callout"
 
-const shortcodes = { Equation }
+const shortcodes = { Equation, Callout }
 
 export default ({ pageContext, children }) => {
   const frontmatter = pageContext.frontmatter
@@ -108,6 +109,11 @@ export default ({ pageContext, children }) => {
 
               p {
                 margin-bottom: 16px;
+              }
+
+              code {
+                background-color: var(--text-100);
+                padding: 0 4px;
               }
             `}
           >
