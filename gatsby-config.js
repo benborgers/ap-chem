@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
     "gatsby-plugin-netlify-cache",
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-emotion",
     "@rhysforyou/gatsby-plugin-react-helmet-async",
     {
