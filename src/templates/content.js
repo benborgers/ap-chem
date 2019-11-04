@@ -99,7 +99,7 @@ export default ({ pageContext, children }) => {
                 margin-top: 32px;
               }
 
-              p, li {
+              p, .callout-text, li {
                 line-height: 1.5;
               }
 
@@ -107,7 +107,7 @@ export default ({ pageContext, children }) => {
                 margin-bottom: 8px;
               }
 
-              p {
+              p, .callout-text {
                 margin-bottom: 16px;
               }
 

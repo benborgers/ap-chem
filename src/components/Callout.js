@@ -31,13 +31,14 @@ export default ({ emoji = "💡", children }) => {
         `}
       />
 
-      <p
+      <div
+        className="callout-text"
         css={css`
           margin: 0 !important;
         `}
       >
         {children}
-      </p>
+      </div>
     </div>
   )
 }
