@@ -6,7 +6,7 @@ export default ({ emoji = "💡", children }) => {
     <div
       css={css`
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: max-content auto;
         grid-column-gap: 24px;
 
         background-color: white;
@@ -17,7 +17,7 @@ export default ({ emoji = "💡", children }) => {
 
         @media (max-width: 450px) {
           grid-template-columns: 1fr;
-          grid-template-rows: auto auto;
+          grid-template-rows: max-content auto;
           grid-row-gap: 16px;
         }
       `}
