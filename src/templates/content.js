@@ -19,7 +19,7 @@ export default ({ pageContext, children }) => {
     <>
       <Head
         title={`Unit ${frontmatter.unit}: ${frontmatter.title}`}
-        description={`Explanation of unit ${frontmatter.title} in AP Chemistry.`}
+        description={`Explanation of ${frontmatter.title.toLowerCase()} in AP Chemistry.`}
       />
 
       <GlobalStyles />
