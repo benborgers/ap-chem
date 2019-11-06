@@ -13,7 +13,7 @@ export default ({ data }) => {
     <>
       <Head
         title="AP Chemistry"
-        description="Summaries of units in AP Chemistry."
+        description="Summaries and explanations of units in AP Chemistry."
       />
 
       <GlobalStyles />
