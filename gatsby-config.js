@@ -52,6 +52,7 @@ module.exports = {
                   display: grid;
                   place-items: center center;
                   background-color: hsl(225, 65%, 37%);
+                  padding: 0 64px;
                 }
                 
                 h1 {
