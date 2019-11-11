@@ -1,6 +1,7 @@
 {
   "name": "ap-chem",
   "dependencies": {
+    "@benborgers/gatsby-plugin-og-image": "^1.0.0",
     "@emotion/core": "^10.0.22",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",

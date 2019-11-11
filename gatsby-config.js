@@ -27,6 +27,52 @@ module.exports = {
       options: {
         siteId: "LLDKMLXI"
       }
+    },
+    {
+      resolve: "@benborgers/gatsby-plugin-og-image",
+      options: {
+        domain: "https://chem.elk.sh",
+        fn: title => {
+          const template = text => {
+            return `
+              <main>
+                <h1>
+                  ${text}
+                </h1>
+              </main>
+
+              <style>
+                @import url("https://rsms.me/inter/inter.css");
+
+                * {
+                  margin: 0;
+                  padding: 0;
+                }
+
+                main {
+                  height: 100vh;
+                  display: grid;
+                  place-items: center center;
+                  background-color: hsl(225, 65%, 37%);
+                }
+                
+                h1 {
+                  font-size: 32px;
+                  font-family: "Inter";
+                  color: white;
+                  line-height: 1.3;
+                }
+              </style>
+            `
+          }
+
+          if(title === "AP Chemistry") {
+            return template("Summaries and explanations<br>of units in AP Chemistry.")
+          } else {
+            return template(title.split(":")[1])
+          }
+        }
+      }
     }
   ]
 }
