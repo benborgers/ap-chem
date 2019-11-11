@@ -42,8 +42,6 @@ module.exports = {
               </main>
 
               <style>
-                @import url("https://rsms.me/inter/inter.css");
-
                 * {
                   margin: 0;
                   padding: 0;
@@ -57,8 +55,8 @@ module.exports = {
                 }
                 
                 h1 {
-                  font-size: 32px;
-                  font-family: "Inter";
+                  font-size: 44px;
+                  font-family: sans-serif;
                   color: white;
                   line-height: 1.3;
                 }
