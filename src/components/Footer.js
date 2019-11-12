@@ -116,10 +116,18 @@ export default () => {
             exit={{
               opacity: 0
             }}
+            onClick={event => {
+              const withinModal = event.target.closest(".modal")
+
+              if(!withinModal) {
+                setOpen(false)
+              }
+            }}
           >
 
             <motion.div
               key="modal"
+              className="modal"
               css={css`
                 background-color: white;
                 padding: 24px;
