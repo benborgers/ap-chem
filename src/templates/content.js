@@ -9,6 +9,7 @@ import Layout from "../components/Layout"
 
 import Equation from "../components/Equation"
 import Callout from "../components/Callout"
+import Footer from "../components/Footer"
 
 const shortcodes = { Equation, Callout }
 
@@ -119,6 +120,8 @@ export default ({ pageContext, children }) => {
           >
             <MDXProvider components={shortcodes}>{children}</MDXProvider>
           </div>
+
+          <Footer />
       </Layout>
     </>
   )

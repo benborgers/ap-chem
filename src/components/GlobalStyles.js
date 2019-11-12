@@ -19,11 +19,13 @@ export default () => {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
           }
 
           body {
             --text-500: hsl(225, 30%, 15%);
             --text-300: hsl(225, 10%, 35%);
+            --text-200: hsl(225, 15%, 75%);
             --text-100: hsl(225, 30%, 90%);
 
             --accent: hsl(225, 65%, 37%);
