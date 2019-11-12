@@ -43,8 +43,8 @@ export default ({ pageContext, children }) => {
             >
               <p
                 css={css`
-                  color: white;
-                  background-color: var(--accent);
+                  color: var(--accent);
+                  background-color: var(--accent-light);
                   padding: 4px 8px;
                   border-radius: 4px;
                   font-weight: 500;
