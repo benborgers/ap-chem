@@ -28,6 +28,10 @@ export default () => {
   }, [open])
 
   const submit = () => {
+    if(!input) {
+      return 
+    }
+
     setButtonText("Sending...")
 
     fetch(endpoint + "/send", {
@@ -45,7 +49,7 @@ export default () => {
       .then(json => {
         if(json.success) {
           setInput("")
-          setButtonText("Sent")
+          setButtonText("Sent!")
         } else {
           setButtonText("Send")
           alert("Something went wrong, please try again.")
