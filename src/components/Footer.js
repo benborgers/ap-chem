@@ -188,7 +188,7 @@ export default () => {
                   border-radius: 4px;
                   padding: 16px;
                   background: transparent;
-                  resize: vertical;
+                  resize: none;
                   min-height: 200px;
                   transition: border-color .2s;
                   outline: none;
