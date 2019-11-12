@@ -97,6 +97,10 @@ export default () => {
               
               display: grid;
               place-items: center center;
+
+              @media (max-width: 550px) {
+                place-items: start center;
+              }
             `}
             key="wrapper"
             style={{
@@ -119,7 +123,7 @@ export default () => {
                 opacity: 1;
                 border-radius: 6px;
                 border: 1px solid var(--text-100);
-                margin: 0 16px;
+                margin: 16px;
 
                 @media (max-width: 550px) {
                   width: calc(100% - 32px);
