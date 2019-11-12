@@ -16,13 +16,9 @@ export default () => {
   }, [])
 
   useEffect(() => {
-    /* lock/unlock scroll depending on whether modal is open */
     if(open === true) {
-      /* reset send button text so when reopening after sending feedback once the button doesn't still say "Sent" */
+      // reset send button text so when reopening after sending feedback once the button doesn't still say "Sent"
       setButtonText("Send")
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "visible"
     }
     
   }, [open])
