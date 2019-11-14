@@ -51,10 +51,6 @@ export default ({ pageContext, children }) => {
                   font-size: .95rem;
                   display: inline-block;
                   margin-bottom: 0;
-
-                  ::selection {
-                    color: white;
-                  }
                 `}
               >
                 Unit {frontmatter.unit}
