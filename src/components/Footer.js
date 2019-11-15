@@ -215,6 +215,7 @@ export default () => {
                   }
                 `}
                 onClick={submit}
+                disabled={buttonText.toLowerCase().includes("sending")}
               >
                 {buttonText}
               </button>
