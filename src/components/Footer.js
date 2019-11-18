@@ -38,7 +38,7 @@ export default () => {
       body: JSON.stringify({
         from: "chem.elk.sh",
         subject: "New feedback for chem.elk.sh",
-        body: input.replace(/\n/g, "<br>")
+        body: `<em>Page: "${document.title}"</em> <br><br> ${input.replace(/\n/g, "<br>")}`
       })
     })
       .then(res => res.json())
