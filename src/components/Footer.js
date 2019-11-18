@@ -53,6 +53,22 @@ export default () => {
       })
   }
 
+
+  useEffect(() => {
+    const listener = event => {
+      const key = event.key.toLowerCase()
+      if(key === "escape") {
+        setOpen(false)
+      }
+    }
+
+    document.addEventListener("keydown", listener)
+
+    return () => {
+      document.removeEventListener("keydown", listener)
+    }
+  }, [])
+
   return (
     <>
       <footer
@@ -78,7 +94,7 @@ export default () => {
               cursor: pointer;
             `}
           >
-            submit feedback. 
+            submit feedback.
           </span>
         </p>
       </footer>
