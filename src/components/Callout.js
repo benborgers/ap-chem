@@ -25,6 +25,7 @@ export default ({ emoji = "💡", children }) => {
       <img
         src={`https://emojicdn.elk.sh/${emoji}`}
         alt=""
+        className="callout-emoji"
         css={css`
           max-width: 1.2rem;
           align-self: center;

@@ -112,6 +112,10 @@ export default ({ pageContext, children }) => {
                 background-color: var(--text-100);
                 padding: 0 4px;
               }
+
+              img :not(.callout-emoji) {
+                max-width: 100%;
+              }
             `}
           >
             <MDXProvider components={shortcodes}>{children}</MDXProvider>
