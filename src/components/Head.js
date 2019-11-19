@@ -10,7 +10,7 @@ export default ({ title, description }) => {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`https://og-image.glitch.me/${title.split(":").slice(-1)[0].trim()}/hsl(225, 65%, 37%)/hsl(43, 28%, 95%)`} />
+      <meta property="og:image" content={encodeURI(`https://og-image.glitch.me/${title.split(":").slice(-1)[0].trim()}/hsl(225, 65%, 37%)/hsl(43, 28%, 95%)`)} />
 
       <meta property="twitter:card" content="summary_large_image" />
 
