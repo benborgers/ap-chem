@@ -84,7 +84,7 @@ export default () => {
             margin: 0;
           `}
         >
-          If you have any suggestions or find any mistakes, feel free to
+          Is this useful? Are there mistakes? You can
           {" "}
 
           <span
@@ -94,8 +94,11 @@ export default () => {
               cursor: pointer;
             `}
           >
-            submit feedback.
+            submit feedback
           </span>
+
+          {" "}
+          quickly and anonymously.
         </p>
       </footer>
 
@@ -176,7 +179,7 @@ export default () => {
                     font-weight: 500;
                   `}
                 >
-                  Suggestions or corrections:
+                  Feedback:
                 </p>
 
                 <div
