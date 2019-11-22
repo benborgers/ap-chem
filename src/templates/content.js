@@ -6,12 +6,13 @@ import { MDXProvider } from "@mdx-js/react"
 import Head from "../components/Head"
 import GlobalStyles from "../components/GlobalStyles"
 import Layout from "../components/Layout"
+import Footer from "../components/Footer"
 
 import Equation from "../components/Equation"
 import Callout from "../components/Callout"
-import Footer from "../components/Footer"
+import Table from "../components/Table"
 
-const shortcodes = { Equation, Callout }
+const shortcodes = { Equation, Callout, Table }
 
 export default ({ pageContext, children }) => {
   const frontmatter = pageContext.frontmatter
