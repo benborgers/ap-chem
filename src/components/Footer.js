@@ -84,7 +84,7 @@ export default () => {
             margin: 0;
           `}
         >
-          Is this useful? Are there mistakes? You can
+          Is this useful? Are there mistakes or things left out?
           {" "}
 
           <span
@@ -94,11 +94,9 @@ export default () => {
               cursor: pointer;
             `}
           >
-            submit feedback
+            Submit feedback
           </span>
-
-          {" "}
-          quickly and anonymously.
+          .
         </p>
       </footer>
 
