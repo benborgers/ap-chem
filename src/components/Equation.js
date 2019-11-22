@@ -1,25 +1,21 @@
 import React from "react"
-import { css, Global } from "@emotion/core"
+import { css } from "@emotion/core"
+import katex from "katex"
 
 import "katex/dist/katex.min.css"
-import { BlockMath } from "react-katex"
 
 export default ({ text }) => {
+  const html = katex.renderToString(text, {
+    displayMode: true,
+    throwOnError: false
+  })
+
   return (
-    <>
-      <Global
-        styles={css`
-          .katex * {
-            font-family: serif;
-          }
-
-          .katex {
-            margin: 24px 0;
-          }
-        `}
-      />
-
-      <BlockMath math={text} />
-    </>
+    <div
+      dangerouslySetInnerHTML={{ __html: html }}
+      css={css`
+        margin: 32px 0;
+      `}
+    />
   )
 }

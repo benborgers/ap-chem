@@ -13,7 +13,7 @@ export default () => {
 
       <Global
         styles={css`
-          * {
+          p, h1, h2, h3, div, input, textarea, button {
             font-family: "Inter", sans-serif;
             color: var(--text-300);
             -webkit-font-smoothing: antialiased;
