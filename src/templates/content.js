@@ -114,7 +114,9 @@ export default ({ pageContext, children }) => {
               }
 
               img :not(.callout-emoji) {
+                width: 600px;
                 max-width: 100%;
+                margin: 16px 0;
               }
             `}
           >
