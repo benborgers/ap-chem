@@ -84,7 +84,7 @@ export default () => {
             margin: 0;
           `}
         >
-          Is this useful? Are there mistakes or things left out?
+          Is this useful? Are there any mistakes or things left out?
           {" "}
 
           <span
