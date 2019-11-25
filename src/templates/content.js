@@ -9,10 +9,11 @@ import Layout from "../components/Layout"
 import Footer from "../components/Footer"
 
 import Equation from "../components/Equation"
+import InlineMath from "../components/InlineMath"
 import Callout from "../components/Callout"
 import Table from "../components/Table"
 
-const shortcodes = { Equation, Callout, Table }
+const shortcodes = { Equation, InlineMath, Callout, Table }
 
 export default ({ pageContext, children }) => {
   const frontmatter = pageContext.frontmatter
