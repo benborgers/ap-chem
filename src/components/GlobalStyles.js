@@ -22,6 +22,10 @@ export default () => {
             box-sizing: border-box;
           }
 
+          a {
+            color: inherit;
+          }
+
           body {
             --text-500: hsl(225, 30%, 15%);
             --text-300: hsl(225, 10%, 35%);
