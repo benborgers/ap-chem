@@ -94,7 +94,7 @@ export default () => {
               cursor: pointer;
             `}
           >
-            Submit feedback
+            Send some feedback
           </span>
           .
         </p>
