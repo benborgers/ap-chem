@@ -36,6 +36,10 @@ export default ({ emoji = "💡", children }) => {
         className="callout-text"
         css={css`
           margin: 0 !important;
+
+          *:last-of-type {
+            margin-bottom: 4px;
+          }
         `}
       >
         {children}
