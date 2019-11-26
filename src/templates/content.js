@@ -6,7 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 import Head from "../components/Head"
 import GlobalStyles from "../components/GlobalStyles"
 import Layout from "../components/Layout"
-import Footer from "../components/Footer"
+import CTA from "../components/CTA"
 
 import Equation from "../components/Equation"
 import InlineMath from "../components/InlineMath"
@@ -69,17 +69,7 @@ export default ({ pageContext, children }) => {
               {frontmatter.title}
             </h1>
 
-            <p
-              css={css`
-                line-height: 1.6;
-                font-style: italic;
-                padding: 8px 0;
-                padding-left: 32px;
-                border-left: 4px solid var(--accent-light);
-              `}
-            >
-              Make your studying easier. Text “chem” to <a href="sms:6177444640">617-744-4640</a> to be notified every time there's a new study guide for you.
-            </p>
+            <CTA />
           </header>
 
           <div
@@ -137,7 +127,7 @@ export default ({ pageContext, children }) => {
             <MDXProvider components={shortcodes}>{children}</MDXProvider>
           </div>
 
-          <Footer />
+          <CTA isFooter={true} />
       </Layout>
     </>
   )
