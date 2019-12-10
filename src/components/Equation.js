@@ -15,6 +15,8 @@ export default ({ text }) => {
       dangerouslySetInnerHTML={{ __html: html }}
       css={css`
         margin: 32px 0;
+        max-width: 100%;
+        overflow: scroll;
       `}
     />
   )
