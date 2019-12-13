@@ -12,7 +12,7 @@ import InlineMath from "../components/InlineMath"
 import Callout from "../components/Callout"
 import Table from "../components/Table"
 
-const shortcodes = { Equation, InlineMath, Callout, Table }
+import * as Heading from "../components/mdx/Heading"
 
 export default ({ pageContext, children }) => {
   const frontmatter = pageContext.frontmatter
@@ -120,7 +120,19 @@ export default ({ pageContext, children }) => {
               }
             `}
           >
-            <MDXProvider components={shortcodes}>{children}</MDXProvider>
+            <MDXProvider
+              components={{
+                Equation,
+                InlineMath,
+                Callout,
+                Table,
+                h1: Heading.h1,
+                h2: Heading.h2,
+                h3: Heading.h3
+              }}
+            >
+              {children}
+            </MDXProvider>
           </div>
       </Layout>
     </>
