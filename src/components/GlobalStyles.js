@@ -35,6 +35,8 @@ export default () => {
             --accent: hsl(225, 65%, 37%);
             --accent-light: hsl(225, 50%, 90%);
 
+            --highlight: hsl(43, 100%, 83%);
+
             --background: hsl(43, 28%, 95%);
 
             --shadow: hsl(225, 0%, 91%);

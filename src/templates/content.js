@@ -97,6 +97,14 @@ export default ({ pageContext, children }) => {
                 margin-top: 32px;
               }
 
+              h1, h2, h3 {
+                max-width: max-content;
+              }
+
+              h1:target, h2:target, h3:target {
+                background-color: var(--highlight);
+              }
+
               p, .callout-text, li {
                 line-height: 1.5;
               }
