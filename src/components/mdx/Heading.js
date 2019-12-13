@@ -1,5 +1,4 @@
 import React from "react"
-import { css } from "@emotion/core"
 
 const makeId = text => text.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim().replace(/ /g,"-")
 
