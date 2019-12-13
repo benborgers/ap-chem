@@ -13,6 +13,7 @@ import Callout from "../components/Callout"
 import Table from "../components/Table"
 
 import * as Heading from "../components/mdx/Heading"
+import MDXLink from "../components/mdx/Link"
 
 export default ({ pageContext, children }) => {
   const frontmatter = pageContext.frontmatter
@@ -136,7 +137,8 @@ export default ({ pageContext, children }) => {
                 Table,
                 h1: Heading.h1,
                 h2: Heading.h2,
-                h3: Heading.h3
+                h3: Heading.h3,
+                a: MDXLink
               }}
             >
               {children}
