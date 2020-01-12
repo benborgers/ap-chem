@@ -113,6 +113,10 @@ export default ({ pageContext, children }) => {
                 margin-bottom: 8px;
               }
 
+              li > ul {
+                margin-top: 4px;
+              }
+
               p, .callout-text {
                 margin-bottom: 16px;
               }
