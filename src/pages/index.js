@@ -104,7 +104,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: {fields: frontmatter___unit, order: DESC}) {
+    allMdx(sort: {fields: frontmatter___order, order: DESC}) {
       edges {
         node {
           frontmatter {
