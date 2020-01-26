@@ -73,11 +73,8 @@ export default ({ data }) => {
                   box-shadow: 0px 2px 8px var(--shadow);
                   
                   ${page.unit === highlight && `
-                    background-color: var(--accent);
-
-                    * {
-                      color: white;
-                    }
+                    background-color: var(--accent-light);
+                    border-color: var(--accent);
                   `}
                 `}
               >
