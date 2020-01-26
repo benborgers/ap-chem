@@ -46,7 +46,7 @@ export default ({ data }) => {
               line-height: 1.4;
             `}
           >
-            {"Unit summaries written by "}
+            {"Unit summaries by "}
             <a href="https://benborgers.com">
               Ben Borgers
             </a>
