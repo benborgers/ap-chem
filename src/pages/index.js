@@ -8,6 +8,9 @@ import Layout from "../components/Layout"
 
 export default ({ data }) => {
   const pages = data.allMdx.edges.map(edge => edge.node.frontmatter)
+  
+  // Unit name (string) to highlight on the home page, if any.
+  const highlight = "10"
 
   return (
     <>
@@ -68,6 +71,14 @@ export default ({ data }) => {
                   padding: 24px;
                   border-radius: 6px;
                   box-shadow: 0px 2px 8px var(--shadow);
+                  
+                  ${page.unit === highlight && `
+                    background-color: var(--accent);
+
+                    * {
+                      color: white;
+                    }
+                  `}
                 `}
               >
                 <p
