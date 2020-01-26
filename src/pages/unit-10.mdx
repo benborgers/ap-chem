@@ -4,19 +4,9 @@ order: 10
 title: Gases
 ---
 
-<Callout emoji="🚧">
-This page is unfinished.
-</Callout>
-
-<div
-  style={{
-    marginBottom: 32
-  }}
-/>
-
 # Equations
 
-This is a calculation-heavy unit. There's a couple formulas you should know, and a couple things to keep in mind: 
+This is a calculation and stoichiometry-heavy unit. Using these formulas, you can both reason out relationships between pressure, temperature, volume, mass, etc., and calculate precise values for problems.
 
 <Callout emoji="🤔">
 What is <InlineMath text="R" />&nbsp;?
@@ -33,6 +23,20 @@ In these formulas, <InlineMath text="R" /> is the universal *gas constant*. It's
 <Callout emoji="⚠️">
 In these formulas, you should always convert the temperature to Kelvin, <em>even if the problems provides it in Celsius</em>.
 </Callout>
+
+## Combined gas law
+
+<Equation text="\frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2}" />
+
+This also gives the equation: 
+
+<Equation text="P_1 V_1 T_2 = P_2 V_2 T_1" />
+
+### Example problem
+
+Problem: You're given the initial pressure and volume (<InlineMath text="P_1" /> and <InlineMath text="V_1" />), and told that the gas is put into a larger container (<InlineMath text="V_2" />). What is the new pressure? 
+
+Answer: Since temperature is constant, we can cancel temperature on both sides. Rearranging the equation, we get <InlineMath text="P_2 = \frac{P_1 V_1}{V_2}" />
 
 ## Ideal gas law
 
@@ -57,3 +61,81 @@ In these formulas, you should always convert the temperature to Kelvin, <em>even
 * d = density (mass / volume)
 * R = gas constant (see above)
 * T = temperature (in Kelvin)
+
+
+# Ideal Gases
+
+An ideal gas is a gas that follows the **Kinetic Molecular Theory of Gases**. This assumes that gases consist of molecules that are in constant and random motion, that there are no attractive or repulsive forces between molecules, that no energy is lost during collisions, and that the volume of gas molecules is zero. 
+
+In reality, *there are no ideal gases*. All gases have intermolecular forces ([LDF](/unit-11+12/#types-of-intermolecular-forces) at least), and molecules have volume (although it is small compared to the vast area in between molecules). However, ideal gases are a good way of approximating the way real gases behave. 
+
+## Deviations from the ideal gas law
+
+Gases deviate more greatly from the ideal gas law when: 
+
+* There are high intermolecular forces
+  * Ideal gas law states that there are no intermolecular forces
+* Temperature is low
+  * High temperatures allow molecules to overcome intermolecular forces
+* Pressure is high
+  * Distance between molecules becomes smaller, so the molecules' volume begins to matter
+
+
+# STP
+
+STP, or **Standard Temperature and Pressure**, refers to conditions at 273K and 1 atm. This information is also provided on the AP test reference sheet.
+
+
+# Manometers
+
+![A digram of a manometer, both with a closed end and an open end, and formulas for calculating the respective pressure.](/assets/manometer.png)
+
+A **manometer** is a device for measuring the pressure of a gas, using a volume of liquid mercury. 
+
+In Figure 1a, the manometer is closed to outside pressure. This means that the pressure of the gas is directly proportional to how far the mercury is pushed away from the gas. 
+
+In Figure 1b, the gas inside the manometer is pushing against outside pressure (<InlineMath text="P_\text{atm}" />). Therefore, we must take into account the pressure pushing into the manometer. If the column of mercury is on the left side, we subtract <InlineMath text="P_\text{atm}" />. 
+
+In both cases, the height <InlineMath text="P_h" /> is measured in millimeters, as a special unit called <InlineMath text="\text{mm Hg}" /> (millimeters of mercury). <InlineMath text="1 \ \text{mm Hg}" /> is equal to <InlineMath text="1 \ \text{torr}" /> (and <InlineMath text="760 \ \text{torr} = 1 \ \text{atm}" />).
+
+
+# Partial Pressure
+
+**Dalton's Law of Partial Pressures**: if two gases that *don't react* are combined in a container, the total pressure is their combined individual pressures. 
+
+Calculating **mole fraction** means calculating <InlineMath text="(\text{moles of a substance}) / (\text{total moles})" />
+
+## Collecting gas over water
+
+A common experiment in problems is one that involves calculating the pressure of a gas that is collected over water. 
+
+Since the container of gas over water also contains 100% water vapor, we use this equation to get only the partial pressure of the gas: 
+
+<Equation text="P_\text{gas} = P_\text{total} - P_\text{water}" />
+
+
+# Kinetic Energy
+
+<Equation text="\text{kinetic energy} = \frac{1}{2} m v^2" />
+
+* m = mass
+* v = velocity
+
+<Callout>
+  Kinetic energy is a measure of average temperature, so <strong>it is constant for any gas at the same temperature</strong>. 
+</Callout>
+
+Since kinetic energy (KE) stays constant, as molecules get more massive (<InlineMath text="m" /> increases, velocity (<InlineMath text="v" /> must decrease). 
+
+<Callout>
+  Larger molecules move with a slower velocity.
+</Callout>
+
+
+# Diffusion and Effusion
+
+**Diffusion** is the gradual mixing of molecules of different gases, until they are evenly distributed in a container.
+
+**Effusion** is the movement of molecules into an empty container (vacuum). This is faster than diffusion, since there aren't any molecules to bump into along the way.
+
+Smaller molecules diffuse and effuse faster, which can be seen through the formula for kinetic energy (explained above). 
