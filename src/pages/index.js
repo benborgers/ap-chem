@@ -10,7 +10,7 @@ export default ({ data }) => {
   const pages = data.allMdx.edges.map(edge => edge.node.frontmatter)
   
   // Unit name (string) to highlight on the home page, if any.
-  const highlight = "10"
+  const highlight = ""
 
   return (
     <>
