@@ -1,152 +1,72 @@
 import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
-import { MDXProvider } from "@mdx-js/react"
 
 import Head from "../components/Head"
 import GlobalStyles from "../components/GlobalStyles"
 import Layout from "../components/Layout"
 
-import Equation from "../components/Equation"
-import InlineMath from "../components/InlineMath"
-import Callout from "../components/Callout"
-import Table from "../components/Table"
-
-import * as Heading from "../components/mdx/Heading"
-
-export default ({ pageContext, children }) => {
-  const frontmatter = pageContext.frontmatter
-
+export default ({ pageContext }) => {
   return (
     <>
       <Head
-        title={`Unit ${frontmatter.unit}: ${frontmatter.title}`}
-        description={`Explanation of ${frontmatter.title.toLowerCase()} in AP Chemistry.`}
+        title={pageContext.fields.Title + " - AP Chem"}
       />
 
       <GlobalStyles />
 
       <Layout>
-          <header
+        <header
+          css={css`
+            margin-bottom: 48px;
+          `}
+        >
+          <Link
+            to="/"
             css={css`
-              margin-bottom: 64px;
-
-              @media (max-width: 768px) {
-                margin-bottom: 36px;
-              }
+              display: block;
+              background-color: var(--accent-light);
+              color: var(--accent);
+              max-width: max-content;
+              font-family: var(--font);
+              padding: 4px 8px;
+              border-radius: 4px;
+              font-size: 14px;
+              font-weight: 500;
+              text-decoration: none;
+              margin-bottom: 8px;
             `}
           >
-            <Link
-              to="/"
-              css={css`
-                text-decoration: none;
-              `}
-            >
-              <p
-                css={css`
-                  color: var(--accent);
-                  background-color: var(--accent-light);
-                  padding: 4px 8px;
-                  border-radius: 4px;
-                  font-weight: 500;
-                  font-size: .95rem;
-                  display: inline-block;
-                  margin-bottom: 0;
-                `}
-              >
-                Unit {frontmatter.unit}
-              </p>
-            </Link>
+            AP Chem
+          </Link>
 
-            <h1
-              css={css`
-                margin-top: 12px;
-                color: var(--text-500);
-                line-height: 1.2;
-              `}
-            >
-              {frontmatter.title}
-            </h1>
-          </header>
-
-          <div
+          <h1
             css={css`
-              h1, h2, h3 {
-                line-height: 1.3;
-              }
-
-              h1:first-of-type {
-                margin-top: 0;
-              }
-
-              h1 {
-                color: var(--text-500);
-                font-size: 1.6rem;
-                margin-top: 64px;
-                margin-bottom: 24px;
-              }
-
-              h2 {
-                font-size: 1.3rem;
-                margin-top: 32px;
-              }
-
-              h3 {
-                text-transform: uppercase;
-                font-size: .9rem;
-                margin-top: 32px;
-              }
-
-              h1, h2, h3 {
-                max-width: max-content;
-              }
-
-              h1:target, h2:target, h3:target {
-                background-color: var(--highlight);
-              }
-
-              p, .callout-text, li {
-                line-height: 1.5;
-              }
-
-              li {
-                margin-bottom: 8px;
-              }
-
-              li > ul {
-                margin-top: 4px;
-              }
-
-              p, .callout-text {
-                margin-bottom: 16px;
-              }
-
-              code {
-                background-color: var(--text-100);
-                padding: 0 4px;
-              }
-
-              img :not(.callout-emoji) {
-                max-width: 100%;
-                max-height: 60vh;
-                margin: 16px 0;
-              }
+              font-family: var(--font);
+              margin-top: 0;
             `}
           >
-            <MDXProvider
-              components={{
-                Equation,
-                InlineMath,
-                Callout,
-                Table,
-                h1: Heading.h1,
-                h2: Heading.h2,
-                h3: Heading.h3
-              }}
-            >
-              {children}
-            </MDXProvider>
-          </div>
+            {pageContext.fields.Title}
+          </h1>
+        </header>
+
+        <main
+          dangerouslySetInnerHTML={{ __html: pageContext.html }}
+          css={css`
+            h1, h2, h3, p {
+              font-family: var(--font);
+            }
+
+            p {
+              color: var(--text-300);
+            }
+
+            a {
+              color: inherit;
+              font: inherit;
+            }
+          `}
+        />
       </Layout>
     </>
   )

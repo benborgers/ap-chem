@@ -17,7 +17,7 @@ export default ({ children }) => {
           margin-bottom: 64px;
 
           @media (max-width: 768px) {
-            margin-top: 16px;
+            margin-top: 24px;
           }
         `}
       >

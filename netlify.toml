@@ -1,9 +1,0 @@
-[build]
-  command = "gatsby build"
-  publish = "public"
-
-[[redirects]]
-  from = "https://ap-chem.netlify.com/*"
-  to = "https://chem.elk.sh/:splat"
-  status = 301
-  force = true

@@ -1,17 +1,14 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
 import Head from "../components/Head"
 import GlobalStyles from "../components/GlobalStyles"
 import Layout from "../components/Layout"
 
-export default ({ data }) => {
-  const pages = data.allMdx.edges.map(edge => edge.node.frontmatter)
-  
-  // Unit name (string) to highlight on the home page, if any.
-  const highlight = ""
+import data from "../../data"
 
+export default () => {
   return (
     <>
       <Head
@@ -34,7 +31,9 @@ export default ({ data }) => {
           <h1
             css={css`
               color: var(--accent);
+              margin-top: 0;
               margin-bottom: 8px;
+              font-family: var(--font);
             `}
           >
             AP Chemistry
@@ -44,6 +43,13 @@ export default ({ data }) => {
             css={css`
               margin: 0;
               line-height: 1.4;
+              font-family: var(--font);
+              color: var(--text-300);
+
+              * {
+                color: var(--text-300);
+                text-decoration-color: var(--text-200);
+              }
             `}
           >
             {"Unit summaries by "}
@@ -55,51 +61,34 @@ export default ({ data }) => {
         </header>
 
         <main>
-          {pages.map(page => (
+          {data.map(entry => (
             <Link
-              key={page.unit}
-              to={`/unit-${page.unit}/`}
+              to={"/" + entry.fields.Slug}
               css={css`
                 text-decoration: none;
               `}
+              key={entry.fields.Slug}
             >
               <div
                 css={css`
                   background-color: white;
+                  padding: 16px 24px;
                   border: 1px solid var(--text-100);
-                  margin-bottom: 24px;
-                  padding: 24px;
-                  border-radius: 6px;
+                  border-radius: 8px;
                   box-shadow: 0px 2px 8px var(--shadow);
-                  
-                  ${page.unit === highlight && `
-                    background-color: var(--accent-light);
-                    border-color: var(--accent);
-                  `}
+                  margin-bottom: 24px;
                 `}
               >
                 <p
                   css={css`
-                    text-transform: uppercase;
-                    margin: 0;
-                    font-size: .9rem;
-                    font-weight: 500;
-                    margin-bottom: 8px;
-                    color: var(--text-300);
-                  `}
-                >
-                  Unit {page.unit}
-                </p>
-
-                <p
-                  css={css`
-                    margin: 0;
+                    color: var(--text-500);
+                    font-size: 20px;
+                    font-family: var(--font);
                     color: var(--accent);
-                    font-size: 1.1rem;
                     font-weight: 500;
                   `}
                 >
-                  {page.title}
+                  {entry.fields.Title}
                 </p>
               </div>
             </Link>
@@ -109,18 +98,3 @@ export default ({ data }) => {
     </>
   )
 }
-
-export const pageQuery = graphql`
-  query {
-    allMdx(sort: {fields: frontmatter___order, order: DESC}) {
-      edges {
-        node {
-          frontmatter {
-            unit
-            title
-          }
-        }
-      }
-    }
-  }
-`

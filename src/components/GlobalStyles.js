@@ -13,20 +13,13 @@ export default () => {
 
       <Global
         styles={css`
-          p, h1, h2, h3, div, input, textarea, button {
-            font-family: "Inter", sans-serif;
-            color: var(--text-300);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+          * {
             -webkit-tap-highlight-color: transparent;
-            box-sizing: border-box;
-          }
-
-          a {
-            color: inherit;
           }
 
           body {
+            --font: "Inter", sans-serif;
+
             --text-500: hsl(225, 30%, 15%);
             --text-300: hsl(225, 10%, 35%);
             --text-200: hsl(225, 15%, 75%);
