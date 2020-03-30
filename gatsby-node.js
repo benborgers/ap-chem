@@ -20,7 +20,7 @@ exports.onPreBootstrap = async () => {
 exports.createPages = ({ actions: { createPage } }) => {
   data.forEach(entry => {
     createPage({
-      path: "/" + entry.fields.Slug,
+      path: `/${entry.fields.Slug}/`,
       component: path.resolve("./src/templates/content.js"),
       context: entry
     })

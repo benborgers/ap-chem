@@ -63,7 +63,7 @@ export default () => {
         <main>
           {data.map(entry => (
             <Link
-              to={"/" + entry.fields.Slug}
+              to={`/${entry.fields.Slug}/`}
               css={css`
                 text-decoration: none;
               `}
