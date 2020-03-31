@@ -42,7 +42,7 @@ export default () => {
           <p
             css={css`
               margin: 0;
-              line-height: 1.4;
+              line-height: 1.5;
               font-family: var(--font);
               color: var(--text-300);
 
@@ -55,6 +55,10 @@ export default () => {
             {"Unit summaries by "}
             <a href="https://benborgers.com">
               Ben Borgers
+            </a>
+            {"."}<br />{"I'm in the process of rewriting this site, but for now the old version is "}
+            <a href="https://ap-chem-33g29zpmd.now.sh">
+              here
             </a>
             {"."}
           </p>
