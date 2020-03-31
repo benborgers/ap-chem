@@ -114,10 +114,6 @@ export default ({ pageContext }) => {
               max-width: max-content;
             }
 
-            details[open] {
-              margin-bottom: 48px;
-            }
-
             summary {
               cursor: pointer;
             }
@@ -131,6 +127,17 @@ export default ({ pageContext }) => {
               font-size: 16px;
               font-weight: 600;
               line-height: 1.5;
+            }
+
+            summary h3::before {
+              content: "→";
+              display: inline-block;
+              margin-right: 8px;
+              color: var(--text-200);
+            }
+
+            details[open] summary h3::before {
+              content: "↓";
             }
 
             @media (max-width: 500px) {
