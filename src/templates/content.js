@@ -93,7 +93,7 @@ export default ({ pageContext }) => {
               border: 1px solid var(--text-100);
               max-width: max-content;
               padding: 16px 24px;
-              border-radius: 4px;
+              border-radius: 6px;
               box-shadow: 0px 2px 8px var(--shadow);
               margin: 24px 0;
             }
