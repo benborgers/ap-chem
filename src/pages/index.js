@@ -74,7 +74,7 @@ export default () => {
                   background-color: white;
                   padding: 16px 24px;
                   border: 1px solid var(--text-100);
-                  border-radius: 8px;
+                  border-radius: 4px;
                   box-shadow: 0px 2px 8px var(--shadow);
                   margin-bottom: 24px;
                 `}
