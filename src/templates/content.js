@@ -67,11 +67,19 @@ export default ({ pageContext }) => {
         <main
           dangerouslySetInnerHTML={{ __html: html }}
           css={css`
-            h1, h2, h3, p {
+            h1, h2, h3 {
               font-family: var(--font);
             }
 
-            p {
+            h1 {
+              font-size: 32px;
+              margin-top: 64px;
+              line-height: 1.3;
+              font-weight: 600;
+            }
+
+            p, ol, ul {
+              font-family: var(--font);
               color: var(--text-300);
               line-height: 1.5;
             }
@@ -83,6 +91,19 @@ export default ({ pageContext }) => {
 
             img {
               max-width: 100%;
+            }
+
+            strong {
+              font-weight: 600;
+            }
+
+            ol, ul {
+              padding-left: 0;
+              list-style-position: inside;
+            }
+
+            li {
+              margin-bottom: 8px;
             }
 
             .callout {
@@ -103,10 +124,14 @@ export default ({ pageContext }) => {
               margin: 0;
             }
 
-            h1 {
-              font-size: 32px;
-              margin-top: 64px;
-              line-height: 1.3;
+            .katex {
+              margin: 24px auto;
+              max-width: max-content;
+              display: block;
+            }
+
+            .katex * {
+              color: var(--text-300);
             }
 
             details, summary {
