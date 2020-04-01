@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
+import { Helmet } from "react-helmet-async"
 
 import Head from "../components/Head"
 import GlobalStyles from "../components/GlobalStyles"
@@ -28,6 +29,10 @@ export default ({ pageContext }) => {
       />
 
       <GlobalStyles />
+
+      <Helmet>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" />
+      </Helmet>
 
       <Layout>
         <header
@@ -91,6 +96,8 @@ export default ({ pageContext }) => {
 
             img {
               width: 100%;
+              border-radius: 4px;
+              display: block;
             }
 
             strong {
@@ -104,6 +111,17 @@ export default ({ pageContext }) => {
 
             li {
               margin-bottom: 8px;
+            }
+
+            pre {
+              display: block;
+              margin: 32px 0;
+              overflow: scroll;
+            }
+
+            pre code {
+              font-family: "Roboto Mono", monospace;
+              color: var(--text-300);
             }
 
             .callout {
