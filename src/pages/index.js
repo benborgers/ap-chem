@@ -56,10 +56,6 @@ export default () => {
             <a href="https://benborgers.com">
               Ben Borgers
             </a>
-            {"."}<br />{"I'm in the process of rewriting this site, but for now the old version is "}
-            <a href="https://ap-chem-33g29zpmd.now.sh">
-              here
-            </a>
             {"."}
           </p>
         </header>
@@ -97,6 +93,30 @@ export default () => {
               </div>
             </Link>
           ))}
+
+          <p
+            css={css`
+              font-family: var(--font);
+              color: var(--text-300);
+              line-height: 1.5;
+
+              * {
+                font: inherit;
+                color: inherit;
+              }
+
+              * {
+                text-decoration-color: var(--text-200);
+              }
+            `}
+          >
+            
+            {"I'm in the process of rewriting this site, but for now there's an "}
+            <a href="https://ap-chem-33g29zpmd.now.sh">
+              archive
+            </a>
+            {" of how it was before."}
+          </p>
         </main>
       </Layout>
     </>
