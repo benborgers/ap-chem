@@ -112,7 +112,7 @@ export default () => {
           >
             
             {"I'm in the process of rewriting this site, but for now there's an "}
-            <a href="https://ap-chem-33g29zpmd.now.sh">
+            <a href="https://ap-chem-archive.glitch.me">
               archive
             </a>
             {" of how it was before."}
